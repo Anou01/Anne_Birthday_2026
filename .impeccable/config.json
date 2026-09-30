@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-30T12:03:27.708Z",
+        "reason": "model triage: static scan reads 16px because sizes live in src/styles.css; computed welcome h1 ~52px desktop/~34px mobile, numerals ~350px (verify-fallbacks computed-size check)"
+      },
+      {
+        "rule": "bounce-easing",
+        "value": "*",
+        "files": [
+          "src/styles.css"
+        ],
+        "createdAt": "2026-09-30T12:47:17.706Z",
+        "reason": "user request: photos should 'ค่อยๆเด้งขึ้นมา' (pop/bounce up) from the cake; the one --spring overshoot is that requested pop"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(0, 0, 0)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-30T12:47:17.942Z",
+        "reason": "model triage: static scan without stylesheet; computed welcome h1 color inherits ink #653641"
+      }
+    ]
+  }
+}

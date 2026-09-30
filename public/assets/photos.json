@@ -1,0 +1,80 @@
+[
+  {
+    "src": "assets/photos/memory-01.webp",
+    "width": 1290,
+    "height": 968,
+    "alt": "Our memory 1"
+  },
+  {
+    "src": "assets/photos/memory-02.webp",
+    "width": 646,
+    "height": 860,
+    "alt": "Our memory 2"
+  },
+  {
+    "src": "assets/photos/memory-03.webp",
+    "width": 1215,
+    "height": 1500,
+    "alt": "Our memory 3"
+  },
+  {
+    "src": "assets/photos/memory-04.webp",
+    "width": 1500,
+    "height": 1000,
+    "alt": "Our memory 4"
+  },
+  {
+    "src": "assets/photos/memory-05.webp",
+    "width": 1500,
+    "height": 1000,
+    "alt": "Our memory 5"
+  },
+  {
+    "src": "assets/photos/memory-06.webp",
+    "width": 1500,
+    "height": 1000,
+    "alt": "Our memory 6"
+  },
+  {
+    "src": "assets/photos/memory-07.webp",
+    "width": 1125,
+    "height": 1500,
+    "alt": "Our memory 7"
+  },
+  {
+    "src": "assets/photos/memory-08.webp",
+    "width": 646,
+    "height": 860,
+    "alt": "Our memory 8"
+  },
+  {
+    "src": "assets/photos/memory-09.webp",
+    "width": 1290,
+    "height": 851,
+    "alt": "Our memory 9"
+  },
+  {
+    "src": "assets/photos/memory-10.webp",
+    "width": 1290,
+    "height": 842,
+    "alt": "Our memory 10"
+  },
+  {
+    "src": "assets/photos/memory-11.webp",
+    "width": 960,
+    "height": 1280,
+    "alt": "Our memory 11"
+  },
+  {
+    "src": "assets/photos/memory-12.webp",
+    "width": 721,
+    "height": 482,
+    "alt": "Our memory 12"
+  },
+  {
+    "src": "assets/photos/memory-13.webp",
+    "width": 844,
+    "height": 1500,
+    "alt": "Our memory 13"
+  }
+]

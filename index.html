@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="lo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6eee4" />
+    <meta name="description" content="A little birthday surprise, just for Ani. 30.9.2026" />
+    <title>For Ani — 30.9.2026</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath fill='%23e9a6b0' d='M20 34 5 19C-6 3 16-2 20 9c5-11 26-6 15 10Z'/%3E%3C/svg%3E" />
+  </head>
+  <body data-scene="welcome">
+    <header class="site-header">
+      <button id="sound-toggle" class="icon-button" aria-label="ປິດສຽງ" aria-pressed="false" title="ເປີດ/ປິດສຽງ">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 4 5 9H2v6h3l6 5V4Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-slash" d="m15 9 6 6m0-6-6 6"/></svg>
+      </button>
+    </header>
+
+    <main>
+      <section id="welcome" class="welcome screen" lang="en" aria-labelledby="welcome-title">
+        <p class="welcome-date"><time datetime="2026-09-30" aria-label="30 September 2026"><span class="date-line" aria-hidden="true"><span>30</span><i>.</i><em>9</em><i>.</i><span>2026</span></span></time></p>
+        <figure class="welcome-portrait">
+          <img src="./assets/photos/anne-birthday.webp" srcset="./assets/photos/anne-birthday-720.webp 720w, ./assets/photos/anne-birthday.webp 1200w" sizes="(max-width: 700px) 78vw, 46svh" width="1200" height="1500" alt="Happy Birthday: three photos of Ani" fetchpriority="high" decoding="async" />
+        </figure>
+        <div class="welcome-footer">
+          <div class="welcome-greeting">
+            <h1 id="welcome-title" tabindex="-1">This is a <em>special day.</em></h1>
+            <p class="welcome-note">A little surprise, just for you.</p>
+          </div>
+          <div class="welcome-enter">
+            <button id="enter-button" class="enter-ring"><span class="enter-label">Enter</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+            <span class="keyboard-hint">or press Enter</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="terminal" class="terminal screen" hidden tabindex="-1" aria-label="ຂໍ້ຄວາມວັນເກີດ">
+        <div id="terminal-output" class="terminal-output" lang="en" aria-hidden="true"></div>
+        <p id="terminal-accessible" class="sr-only" lang="en" aria-live="polite"></p>
+      </section>
+
+      <section id="birthday" class="birthday screen" hidden aria-labelledby="birthday-title">
+        <div id="scene-canvas" class="scene-canvas"></div>
+        <div class="scene-vignette" aria-hidden="true"></div>
+        <div class="birthday-heading" lang="lo">
+          <h1 id="birthday-title" tabindex="-1"><span class="wish-name">ສຸກສັນວັນເກີດເດີອານິ</span> <span class="wish-line">ອະທິຖານ!! ແລ້ວຄຳຂໍຈະເປັນຈິງຄັບ</span></h1>
+        </div>
+        <div id="scene-status" class="scene-status" role="status"><span class="loading-dot"></span><span data-ui="sceneLoading">ກຳລັງຈັດໂຕະໃຫ້ຄົນພິເສດ…</span></div>
+        <div id="scene-error" class="scene-error" hidden role="alert"><p data-ui="sceneError">ເປີດສາກເຄັກບໍ່ສຳເລັດ ລອງໂຫຼດໃໝ່ ຫຼື ເປີດຄວາມຊົງຈຳຕໍ່ໄດ້ເລີຍ</p><button id="retry-scene" class="text-button" data-ui="retryScene">ລອງໃໝ່ອີກຄັ້ງ</button><button id="skip-scene" class="text-button" data-ui="skipScene">ເປີດຄວາມຊົງຈຳ</button></div>
+        <div id="wish-controls" class="wish-controls">
+          <p class="wish-prompt" lang="lo">ກົດປູ່ມໃຊ້ໄມເດີ! ຫລັບຕາແລ້ວອາຖິຖານ</p>
+          <button id="microphone-button" class="mic-button" disabled><span class="mic-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></svg></span><span lang="lo">ໃຊ້ໄມເພື່ອເປົ່າເຄັກ</span></button>
+          <p id="mic-status" class="mic-status" role="status"></p>
+          <button id="blow-button" class="blow-fallback" hidden></button>
+        </div>
+        <div class="reveal-dock">
+          <div id="polaroids" class="polaroids" hidden></div>
+          <div id="after-letter" class="after-letter" hidden><button id="gallery-button" class="primary-button light"><span data-ui="galleryButton">ເບິ່ງຄວາມຊົງຈຳທັ້ງໝົດ</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button></div>
+        </div>
+        <button id="letter-hotspot" class="letter-hotspot" hidden aria-label="ເປີດຈົດໝາຍ"></button>
+        <div id="letter-hint" class="letter-hint" hidden role="status"><p id="letter-hint-text"></p><button id="hint-open" class="text-button" hidden data-ui="hintOpen">ເປີດເບິ່ງຈົດໝາຍ</button></div>
+        <span class="scene-footer" lang="en">30 SEPTEMBER 2026 <span aria-hidden="true">·</span> A DAY JUST FOR YOU</span>
+      </section>
+
+      <section id="gallery" class="gallery" hidden aria-labelledby="gallery-title"><div class="gallery-heading" lang="en"><h2 id="gallery-title" tabindex="-1">Our little <em>moments.</em></h2><p>Every one, a little piece of us.</p></div><div id="gallery-grid" class="gallery-grid"></div><div class="gallery-actions"><button id="gallery-letter" class="primary-button" data-ui="galleryLetter">ອ່ານຈົດໝາຍອີກຄັ້ງ</button><button id="replay-button" class="text-button" data-ui="replay">ເບິ່ງອີກຄັ້ງ</button></div></section>
+    </main>
+
+    <dialog id="letter-dialog" class="letter-dialog" aria-labelledby="letter-title">
+      <button id="close-letter" class="icon-button close-letter" aria-label="ປິດຈົດໝາຍ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <article class="letter-paper"><span class="letter-date">30.9.2026</span><h2 id="letter-title" lang="en">For you, <em>Ani.</em></h2><div class="letter-rule"></div><div id="letter-content" lang="lo" class="letter-content"></div><button id="retry-letter" class="text-button" hidden data-ui="retryLetter">ໂຫຼດຈົດໝາຍອີກຄັ້ງ</button><svg class="letter-heart" viewBox="0 0 40 36" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M20 32 5 18C-5 4 13-3 20 9c7-12 25-5 15 9Z"/></svg><span id="letter-end" class="letter-end"></span><button id="letter-gallery" class="primary-button letter-gallery" hidden><span data-ui="galleryButton">ເບິ່ງຄວາມຊົງຈຳ</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button></article>
+    </dialog>
+
+    <dialog id="photo-dialog" class="photo-dialog" aria-label="ຮູບຄວາມຊົງຈຳ">
+      <button id="close-photo" class="icon-button close-photo" aria-label="ປິດຮູບ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <figure id="photo-view" class="photo-view"><figcaption id="photo-view-caption" hidden></figcaption></figure>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

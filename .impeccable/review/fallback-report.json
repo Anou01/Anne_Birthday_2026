@@ -1,0 +1,7 @@
+{
+  "checks": [
+    "Missing cake asset: error with recovery, memories and original letter remain usable at 320px.",
+    "Missing letter: visible retry restores original Lao text without losing the scene.",
+    "Computed mobile typography: Lao heading 31.2px, wish prompt 15px; detector's all-16px warning is a false positive."
+  ]
+}

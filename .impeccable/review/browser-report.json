@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "desktop: portrait welcome, terminal, cake intro, Lao wish text, mic-only with backup after failure, 3 photos pop, photo viewer, letter hint + table hotspot, exact letter, gallery only after reading, replay, fit",
+    "mobile: portrait welcome, terminal, cake intro, Lao wish text, mic-only with backup after failure, 3 photos pop, photo viewer, letter hint + table hotspot, exact letter, gallery only after reading, replay, fit",
+    "normal pace: typing took about 34 s",
+    "normal motion: birthday music loaded, no skip, staged intro (candle, stars, room), words after the room, mute, animated photo pop and letter hint"
+  ],
+  "errors": [],
+  "warnings": []
+}
